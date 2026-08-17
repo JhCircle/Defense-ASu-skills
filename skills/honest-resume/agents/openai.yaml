@@ -1,0 +1,4 @@
+interface:
+  display_name: "honest-resume"
+  short_description: "生成去包装的诚实版 HTML 简历"
+  default_prompt: "用 /honest-resume 根据反酥化结论生成一份可编辑的诚实版中文 HTML 简历。"

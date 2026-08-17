@@ -1,0 +1,31 @@
+{
+  "name": "Defense-Asu-skills",
+  "version": "0.1.0",
+  "description": "中文求职反酥化工作流：经历还原、贡献审计、简历打假、诚实版简历和面试追问。",
+  "author": {
+    "name": "JhCircle",
+    "url": "https://github.com/JhCircle"
+  },
+  "homepage": "https://github.com/JhCircle/Defense-Asu-skills",
+  "repository": "https://github.com/JhCircle/Defense-Asu-skills",
+  "license": "MIT",
+  "keywords": ["resume", "job-search", "audit", "interview", "Defense-Asu", "chinese", "fact-check"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Defense-Asu-skills",
+    "shortDescription": "用 /deasu、/audit-contrib、/resume-audit、/honest-resume、/probe 完成反酥化",
+    "longDescription": "Defense-Asu-skills 将经历还原、开源贡献审计、简历水分打标、诚实版简历生成和面试追问拆成五个可单独调用的 skill，专门对抗过度包装。",
+    "developerName": "JhCircle",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "websiteURL": "https://github.com/JhCircle/Defense-Asu-skills",
+    "defaultPrompt": [
+      "用 /deasu 把我的简历主张还原成可核验事实。",
+      "用 /audit-contrib 对照 PR/diff 审计开源贡献写法。",
+      "用 /resume-audit 给简历打水分等级和红旗。",
+      "用 /honest-resume 生成去包装后的诚实版 HTML 简历。",
+      "用 /probe 根据简历生成面试第二个问题级追问。"
+    ],
+    "brandColor": "#C45C26"
+  }
+}

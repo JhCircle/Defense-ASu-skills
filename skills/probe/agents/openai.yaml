@@ -1,0 +1,4 @@
+interface:
+  display_name: "probe"
+  short_description: "生成面试第二个问题级追问"
+  default_prompt: "用 /probe 根据我的简历生成面试追问脚本，包含期望证据和不合格回答信号。"

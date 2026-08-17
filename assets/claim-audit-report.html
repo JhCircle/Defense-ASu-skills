@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Defense-Asu 主张审计报告</title>
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --ink: #1c1917;
+      --muted: #78716c;
+      --accent: #c45c26;
+      --green: #3f6f4e;
+      --yellow: #a16207;
+      --red: #b91c1c;
+      --card: #fffdf9;
+      --line: #e7e0d5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, #f0e2d4 0%, transparent 40%),
+        radial-gradient(circle at 90% 20%, #e8efe6 0%, transparent 35%),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .toolbar {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; gap: 8px; flex-wrap: wrap;
+      padding: 10px 16px;
+      background: rgba(255,253,249,0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+    .toolbar button {
+      border: 1px solid var(--line);
+      background: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font: inherit;
+    }
+    .wrap { max-width: 920px; margin: 24px auto 64px; padding: 0 16px; }
+    header h1 { font-size: 1.75rem; margin: 0 0 8px; letter-spacing: 0.02em; }
+    header p { margin: 0; color: var(--muted); }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .meta .item, .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .label { font-size: 0.8rem; color: var(--muted); }
+    .value { font-size: 1.15rem; font-weight: 650; margin-top: 4px; }
+    .value[contenteditable="true"], td[contenteditable="true"], p[contenteditable="true"], li[contenteditable="true"], h2[contenteditable="true"] {
+      outline: none;
+    }
+    h2 { font-size: 1.1rem; margin: 28px 0 12px; color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+    th, td { border-bottom: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; font-size: 0.92rem; }
+    th { background: #f3ebe3; font-weight: 650; }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.78rem; font-weight: 650; }
+    .tag.green { background: #e3f0e6; color: var(--green); }
+    .tag.yellow { background: #fef3c7; color: var(--yellow); }
+    .tag.red { background: #fee2e2; color: var(--red); }
+    ul { padding-left: 1.2rem; }
+    footer { margin-top: 28px; color: var(--muted); font-size: 0.85rem; }
+    @media print {
+      .toolbar { display: none !important; }
+      body { background: white; }
+      .wrap { margin: 0; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button type="button" onclick="window.print()">打印 / 导出 PDF</button>
+    <button type="button" onclick="document.execCommand('bold')">加粗选中</button>
+  </div>
+  <div class="wrap">
+    <header>
+      <h1 contenteditable="true">主张审计报告</h1>
+      <p contenteditable="true">Defense-Asu-skills · 反酥化结果（示例数据，请替换为真实审计）</p>
+    </header>
+
+    <div class="meta">
+      <div class="item">
+        <div class="label">目标岗位</div>
+        <div class="value" contenteditable="true">待填写</div>
+      </div>
+      <div class="item">
+        <div class="label">水分等级</div>
+        <div class="value" contenteditable="true">中</div>
+      </div>
+      <div class="item">
+        <div class="label">红旗数</div>
+        <div class="value" contenteditable="true">0</div>
+      </div>
+      <div class="item">
+        <div class="label">审计日期</div>
+        <div class="value" contenteditable="true">YYYY-MM-DD</div>
+      </div>
+    </div>
+
+    <h2 contenteditable="true">一句话总评</h2>
+    <div class="section">
+      <p contenteditable="true">总评写在这里：哪些主张可守住，哪些必须在面试前降级或补证据。</p>
+    </div>
+
+    <h2 contenteditable="true">强主张审计表</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>原文</th>
+          <th>可能真实动作</th>
+          <th>证据</th>
+          <th>风险</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td contenteditable="true">主导文档质量治理专项</td>
+          <td contenteditable="true">修复一处 typo</td>
+          <td contenteditable="true">待补 PR 链接</td>
+          <td><span class="tag red">红</span></td>
+        </tr>
+        <tr>
+          <td contenteditable="true">实现某某接口并完成上线</td>
+          <td contenteditable="true">独立交付接口 + 观测</td>
+          <td contenteditable="true">仓库路径 / 上线记录</td>
+          <td><span class="tag green">绿</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 contenteditable="true">修改优先级</h2>
+    <div class="section">
+      <ul>
+        <li contenteditable="true">必须删：…</li>
+        <li contenteditable="true">必须降级：…</li>
+        <li contenteditable="true">建议补证据：…</li>
+        <li contenteditable="true">可保留：…</li>
+      </ul>
+    </div>
+
+    <h2 contenteditable="true">面试第二个问题（速挖）</h2>
+    <div class="section">
+      <ol>
+        <li contenteditable="true">你说的「主导」具体拍板了哪一件事？</li>
+        <li contenteditable="true">这个数字的基线和统计口径是什么？</li>
+        <li contenteditable="true">开源 PR 改了哪些文件？合并了吗？</li>
+      </ol>
+    </div>
+
+    <footer contenteditable="true">
+      生成自 Defense-Asu-skills。反酥化是为了在追问前把证据闭环，不是为了羞辱表述。
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>诚实版简历</title>
+  <style>
+    :root {
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #d6d3d1;
+      --accent: #9a3412;
+      --bg: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", sans-serif;
+      color: var(--ink);
+      background: #e7e5e4;
+    }
+    .toolbar {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+      padding: 10px 16px;
+      background: #fafaf9;
+      border-bottom: 1px solid var(--line);
+    }
+    .toolbar button, .toolbar label {
+      border: 1px solid var(--line);
+      background: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font: inherit;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      padding: 18mm 16mm;
+      background: var(--bg);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    [contenteditable="true"] { outline: none; }
+    h1 { margin: 0; font-size: 22pt; letter-spacing: 0.04em; }
+    .sub { color: var(--muted); margin-top: 6px; font-size: 10.5pt; }
+    .contact { margin-top: 10px; font-size: 10pt; color: var(--muted); }
+    h2 {
+      margin: 18px 0 8px;
+      font-size: 12pt;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 4px;
+    }
+    .item { margin: 10px 0 14px; }
+    .row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .org { font-weight: 650; }
+    .time { color: var(--muted); font-size: 10pt; }
+    ul { margin: 6px 0 0; padding-left: 1.1rem; }
+    li { margin: 3px 0; font-size: 10.5pt; }
+    .note { font-size: 9.5pt; color: var(--muted); margin-top: 8px; }
+    @media print {
+      .toolbar { display: none !important; }
+      body { background: white; }
+      .page { margin: 0; box-shadow: none; width: auto; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button type="button" onclick="window.print()">打印 / 导出 PDF</button>
+    <button type="button" onclick="document.execCommand('bold')">加粗选中</button>
+    <span style="color:#78716c;font-size:0.9rem">母版：复制后填写，勿直接改仓库源文件</span>
+  </div>
+  <article class="page">
+    <h1 contenteditable="true">姓名</h1>
+    <div class="sub" contenteditable="true">求职方向 · 城市</div>
+    <div class="contact" contenteditable="true">电话 · 邮箱 · GitHub/主页（按需填写，勿提交隐私到公开仓库）</div>
+
+    <h2 contenteditable="true">教育背景</h2>
+    <div class="item">
+      <div class="row">
+        <div class="org" contenteditable="true">学校 · 专业 · 学历</div>
+        <div class="time" contenteditable="true">YYYY.MM – YYYY.MM</div>
+      </div>
+      <ul>
+        <li contenteditable="true">可核验信息：课程 / 奖项 / GPA（可选）</li>
+      </ul>
+    </div>
+
+    <h2 contenteditable="true">经历</h2>
+    <div class="item">
+      <div class="row">
+        <div class="org" contenteditable="true">公司 / 组织 · 角色（真实 title）</div>
+        <div class="time" contenteditable="true">YYYY.MM – YYYY.MM</div>
+      </div>
+      <ul>
+        <li contenteditable="true">动作 + 对象 + 结果（可追问）；避免无证据的「主导/Owner」</li>
+        <li contenteditable="true">如有数字，写明口径与个人边界</li>
+      </ul>
+    </div>
+
+    <h2 contenteditable="true">项目</h2>
+    <div class="item">
+      <div class="row">
+        <div class="org" contenteditable="true">项目名 · 链接</div>
+        <div class="time" contenteditable="true">YYYY.MM – YYYY.MM</div>
+      </div>
+      <ul>
+        <li contenteditable="true">你负责的模块 / 文件 / 接口</li>
+        <li contenteditable="true">验证方式：测试、上线、用户反馈（可核验）</li>
+      </ul>
+    </div>
+
+    <h2 contenteditable="true">开源（可选）</h2>
+    <div class="item">
+      <ul>
+        <li contenteditable="true">仓库 · PR 链接 · 合并状态 · 实际改动（如：修复失效链接）</li>
+      </ul>
+    </div>
+
+    <h2 contenteditable="true">技能</h2>
+    <p contenteditable="true">只写经历中出现过的技术；其余删除或标「了解」。</p>
+
+    <p class="note" contenteditable="true">本页由 Defense-Asu-skills /honest-resume 生成：优先可守住，其次好看。</p>
+  </article>
+</body>
+</html>

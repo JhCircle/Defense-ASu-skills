@@ -1,0 +1,4 @@
+interface:
+  display_name: "resume-audit"
+  short_description: "简历打水分等级与红旗"
+  default_prompt: "用 /resume-audit 审计我的简历，输出水分等级、红旗清单和修改优先级。"

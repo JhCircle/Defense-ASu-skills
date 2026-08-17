@@ -1,0 +1,4 @@
+interface:
+  display_name: "audit-contrib"
+  short_description: "对照 PR/diff 审计开源贡献写法"
+  default_prompt: "用 /audit-contrib 对照我的 PR 链接和简历开源段落，输出贡献水分卡和可守住写法。"
